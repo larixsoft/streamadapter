@@ -28,6 +28,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include "streamadapter.h"
 #include <iostream>
+#include <iomanip>
 #include <cstdio>
 #include <cstring>
 #include <cassert>
@@ -84,7 +85,7 @@ int main()
         if( i%16 == 0) {
             std::cout<<std::endl;
         }
-        printf("%02x ",(int)(*(obuf.get()+i)));
+        std::cout << std::setfill('0') << std::setw(2) << std::hex << static_cast<int>(*(obuf.get()+i)) << " ";
     }
     std::cout << std::endl << std::endl;
     obuf = adapter.take(128);
@@ -93,7 +94,7 @@ int main()
         if( i%16 == 0) {
             std::cout<<std::endl;
         }
-        printf("%02x ",(int)(*(obuf.get()+i)));
+        std::cout << std::setfill('0') << std::setw(2) << std::hex << static_cast<int>(*(obuf.get()+i)) << " ";
     }
     std::cout << std::endl << std::endl;
 
@@ -111,7 +112,7 @@ int main()
         if( i%16 == 0) {
             std::cout<<std::endl;
         }
-        printf("%02x ",(int)(*(ibuf+i)));
+        std::cout << std::setfill('0') << std::setw(2) << std::hex << static_cast<int>(*(ibuf+i)) << " ";
     }
     std::cout << std::endl;
 
@@ -122,7 +123,7 @@ int main()
         if( i%16 == 0) {
             std::cout<<std::endl;
         }
-        printf("%02x ",(int)(*(ibuf+i)));
+        std::cout << std::setfill('0') << std::setw(2) << std::hex << static_cast<int>(*(ibuf+i)) << " ";
     }
     std::cout << std::endl;
 }
