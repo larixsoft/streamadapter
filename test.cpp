@@ -96,7 +96,7 @@ int main()
         }
         std::cout << std::setfill('0') << std::setw(2) << std::hex << static_cast<int>(*(obuf.get()+i)) << " ";
     }
-    std::cout << std::endl << std::endl;
+    std::cout << std::dec << std::endl << std::endl;
 
     std::cout << "Testing StreamAdapter::copy()" << std::endl;
     adapter.clear();
@@ -114,7 +114,7 @@ int main()
         }
         std::cout << std::setfill('0') << std::setw(2) << std::hex << static_cast<int>(*(ibuf+i)) << " ";
     }
-    std::cout << std::endl;
+    std::cout << std::dec << std::endl << std::endl;
 
     adapter.copy(ibuf,128,128);
     assert(adapter.available() == 256);
