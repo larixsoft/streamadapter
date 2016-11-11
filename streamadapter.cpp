@@ -1,5 +1,5 @@
 /*
-Copyright (c) <2015>, <george.wang at larixsoft.com>
+Copyright (c) <2015>, <gwang at larixsoft.com>
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
